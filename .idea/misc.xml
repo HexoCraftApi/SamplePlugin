@@ -13,6 +13,7 @@
         <option value="$PROJECT_DIR$/../Chat/pom.xml" />
         <option value="$PROJECT_DIR$/../Reflection/pom.xml" />
         <option value="$PROJECT_DIR$/../Plugin/pom.xml" />
+        <option value="$PROJECT_DIR$/../Updater/pom.xml" />
       </list>
     </option>
   </component>

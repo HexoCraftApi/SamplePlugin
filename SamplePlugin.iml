@@ -7,6 +7,7 @@
       <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
+      <excludeFolder url="file://$MODULE_DIR$/src/main/java/com/github/hexocraftapi/updater-old" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="inheritedJdk" />
@@ -22,10 +23,12 @@
     <orderEntry type="library" scope="PROVIDED" name="Maven: javax.persistence:persistence-api:1.0" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.yaml:snakeyaml:1.15" level="project" />
     <orderEntry type="module" module-name="Plugin" />
+    <orderEntry type="library" name="Maven: org.mcstats.bukkit:metrics:R7" level="project" />
     <orderEntry type="module" module-name="Reflection" />
     <orderEntry type="module" module-name="Chat" />
     <orderEntry type="module" module-name="Message" />
     <orderEntry type="module" module-name="Command" />
     <orderEntry type="module" module-name="Configuration" />
+    <orderEntry type="module" module-name="Updater" />
   </component>
 </module>

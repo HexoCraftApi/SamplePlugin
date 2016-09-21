@@ -9,6 +9,7 @@
       <module fileurl="file://$PROJECT_DIR$/../Plugin/Plugin.iml" filepath="$PROJECT_DIR$/../Plugin/Plugin.iml" />
       <module fileurl="file://$PROJECT_DIR$/../Reflection/Reflection.iml" filepath="$PROJECT_DIR$/../Reflection/Reflection.iml" />
       <module fileurl="file://$PROJECT_DIR$/SamplePlugin.iml" filepath="$PROJECT_DIR$/SamplePlugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Updater/Updater.iml" filepath="$PROJECT_DIR$/../Updater/Updater.iml" />
     </modules>
   </component>
 </project>

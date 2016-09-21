@@ -37,18 +37,19 @@
         <module name="reflection" />
         <module name="SamplePlugin" />
         <module name="TestPlugin" />
+        <module name="updater" />
+        <module name="Updater" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.7">
       <module name="Chat" target="1.7" />
       <module name="Command" target="1.7" />
-      <module name="command" target="1.7" />
       <module name="Configuration" target="1.7" />
       <module name="Message" target="1.7" />
       <module name="Plugin" target="1.7" />
       <module name="Reflection" target="1.7" />
       <module name="SamplePlugin" target="1.7" />
-      <module name="TestPlugin" target="1.7" />
+      <module name="Updater" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>
