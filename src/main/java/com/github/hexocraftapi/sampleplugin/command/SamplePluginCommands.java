@@ -22,7 +22,7 @@ import com.github.hexocraftapi.command.predifined.CommandHelp;
 import com.github.hexocraftapi.command.predifined.CommandReload;
 import com.github.hexocraftapi.message.locale.Locale;
 import com.github.hexocraftapi.message.predifined.message.PluginMessage;
-import com.github.hexocraftapi.sampleplugin.TestPlugin;
+import com.github.hexocraftapi.sampleplugin.SamplePlugin;
 import com.github.hexocraftapi.sampleplugin.configuration.Config;
 import com.google.common.collect.Lists;
 import org.bukkit.ChatColor;
@@ -33,20 +33,20 @@ import org.bukkit.scheduler.BukkitRunnable;
 /**
  * @author <b>hexosse</b> (<a href="https://github.comp/hexosse">hexosse on GitHub</a>))
  */
-public class TestPluginCommands extends Command<TestPlugin>
+public class SamplePluginCommands extends Command<SamplePlugin>
 {
-	public TestPluginCommands(TestPlugin plugin)
+	public SamplePluginCommands(SamplePlugin plugin)
 	{
-		super("TestPlugin", plugin);
+		super("SamplePlugin", plugin);
 
-		this.addSubCommand(new TestPluginCommandReload(plugin));
-		this.addSubCommand(new TestPluginCommandHelp(plugin));
+		this.addSubCommand(new SamplePluginCommandReload(plugin));
+		this.addSubCommand(new SamplePluginCommandHelp(plugin));
 	}
 
 	@Override
 	public boolean onCommand(CommandInfo commandInfo)
 	{
-		plugin.getServer().dispatchCommand(commandInfo.getSender(), "TestPlugin help");
+		plugin.getServer().dispatchCommand(commandInfo.getSender(), "SamplePlugin help");
 
 		return true;
 	}
@@ -54,9 +54,9 @@ public class TestPluginCommands extends Command<TestPlugin>
 
 
 
-	public class TestPluginCommandReload extends CommandReload<TestPlugin>
+	public class SamplePluginCommandReload extends CommandReload<SamplePlugin>
 	{
-		public TestPluginCommandReload(TestPlugin plugin)
+		public SamplePluginCommandReload(SamplePlugin plugin)
 		{
 			super(plugin, "");
 			this.setAliases(Lists.newArrayList("r"));
@@ -80,7 +80,7 @@ public class TestPluginCommands extends Command<TestPlugin>
 					//plugin.messages = new Messages(plugin, plugin.getDataFolder(), plugin.config.messages);
 
 					// Message
-					String text = Locale.FR_fr?"TestPlugin recharge":"TestPlugin reloaded";
+					String text = Locale.FR_fr?"SamplePlugin recharge":"SamplePlugin reloaded";
 					new PluginMessage(plugin, text, ChatColor.RED).send(new CommandSender[]{player, getPlugin().getServer().getConsoleSender()});
 				}
 
@@ -93,9 +93,9 @@ public class TestPluginCommands extends Command<TestPlugin>
 
 
 
-	public class TestPluginCommandHelp extends CommandHelp<TestPlugin>
+	public class SamplePluginCommandHelp extends CommandHelp<SamplePlugin>
 	{
-		public TestPluginCommandHelp(TestPlugin plugin)
+		public SamplePluginCommandHelp(SamplePlugin plugin)
 		{
 			super(plugin);
 		}

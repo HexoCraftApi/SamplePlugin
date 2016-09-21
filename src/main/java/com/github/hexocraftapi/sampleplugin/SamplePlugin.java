@@ -20,22 +20,22 @@ import com.github.hexocraftapi.message.Line;
 import com.github.hexocraftapi.message.predifined.message.PluginMessage;
 import com.github.hexocraftapi.message.predifined.message.PluginTitleMessage;
 import com.github.hexocraftapi.plugin.Plugin;
-import com.github.hexocraftapi.sampleplugin.configuration.Config;
-import com.github.hexocraftapi.sampleplugin.listener.PlayerListener;
 import com.github.hexocraftapi.sampleplugin.command.ItemCommands;
 import com.github.hexocraftapi.sampleplugin.command.MessageCommands;
-import com.github.hexocraftapi.sampleplugin.command.TestPluginCommands;
+import com.github.hexocraftapi.sampleplugin.command.SamplePluginCommands;
+import com.github.hexocraftapi.sampleplugin.configuration.Config;
+import com.github.hexocraftapi.sampleplugin.listener.PlayerListener;
+import com.github.hexocraftapi.updater.GitHubUpdater;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
-
-import static com.github.hexocraftapi.message.Util.FontUtil.center;
+import org.bukkit.command.CommandSender;
 
 /**
  * @author <b>hexosse</b> (<a href="https://github.comp/hexosse">hexosse on GitHub</a>))
  */
-public class TestPlugin extends Plugin
+public class SamplePlugin extends Plugin
 {
-	public static TestPlugin instance = null;
+	public static SamplePlugin instance = null;
 
 	public Config config = null;
 
@@ -50,7 +50,7 @@ public class TestPlugin extends Plugin
 		config = new Config(this, "config.yml", true);
 
 		/* Enregistrement des commandes */
-		registerCommands(new TestPluginCommands(this));
+		registerCommands(new SamplePluginCommands(this));
 		registerCommands(new MessageCommands(this));
 		registerCommands(new ItemCommands(this));
 
@@ -62,6 +62,9 @@ public class TestPlugin extends Plugin
 			new Line("This is a plugin to test my API.", ChatColor.GREEN),
 			new Line("It will try to cover all the possibilities that offer my API", ChatColor.GREEN),
 			new Line("© 2016 Hexosse", ChatColor.RED));
+
+		/* Updater */
+		runUpdater(getServer().getConsoleSender(), 1);
 	}
 
 	@Override
@@ -69,6 +72,11 @@ public class TestPlugin extends Plugin
 	{
 		super.onDisable();
 
-		PluginMessage.toConsole(this, "Disabled", ChatColor.RED, new Line("TestPlugin is now disabled", ChatColor.DARK_RED));
+		PluginMessage.toConsole(this, "Disabled", ChatColor.RED, new Line("SamplePlugin is now disabled", ChatColor.DARK_RED));
+	}
+
+	private void runUpdater(final CommandSender sender, int delay)
+	{
+		runUpdater(new GitHubUpdater(this, "HexoCraftApi/SamplePlugin"), sender, delay);
 	}
 }

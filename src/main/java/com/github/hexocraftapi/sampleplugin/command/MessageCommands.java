@@ -26,16 +26,16 @@ import com.github.hexocraftapi.message.Util.FontUtil;
 import com.github.hexocraftapi.message.predifined.message.*;
 import com.github.hexocraftapi.message.predifined.prefix.colored.PrefixAqua;
 import com.github.hexocraftapi.message.predifined.prefix.colored.PrefixFire;
-import com.github.hexocraftapi.sampleplugin.TestPlugin;
+import com.github.hexocraftapi.sampleplugin.SamplePlugin;
 import com.google.common.collect.Lists;
 import org.bukkit.ChatColor;
 
 /**
  * @author <b>hexosse</b> (<a href="https://github.comp/hexosse">hexosse on GitHub</a>))
  */
-public class MessageCommands extends Command<TestPlugin>
+public class MessageCommands extends Command<SamplePlugin>
 {
-	public MessageCommands(TestPlugin plugin)
+	public MessageCommands(SamplePlugin plugin)
 	{
 		super("message", plugin);
 		this.setAliases(Lists.newArrayList("m", "mess"));
@@ -55,9 +55,9 @@ public class MessageCommands extends Command<TestPlugin>
 
 
 
-	public class MessageCommandHelp extends CommandHelp<TestPlugin>
+	public class MessageCommandHelp extends CommandHelp<SamplePlugin>
 	{
-		public MessageCommandHelp(TestPlugin plugin)
+		public MessageCommandHelp(SamplePlugin plugin)
 		{
 			super(plugin);
 		}
@@ -66,9 +66,9 @@ public class MessageCommands extends Command<TestPlugin>
 
 
 
-	public class MessageCommandSend extends Command<TestPlugin>
+	public class MessageCommandSend extends Command<SamplePlugin>
 	{
-		public MessageCommandSend(TestPlugin plugin)
+		public MessageCommandSend(SamplePlugin plugin)
 		{
 			super("send", plugin);
 			this.setAliases(Lists.newArrayList("s"));

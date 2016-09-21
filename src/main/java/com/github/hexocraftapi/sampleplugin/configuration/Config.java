@@ -31,7 +31,7 @@ import java.util.HashMap;
  * @author <b>hexosse</b> (<a href="https://github.comp/hexosse">hexosse on GitHub</a>))
  */
 @ConfigHeader(comment = {
-		"# ===--- TestPlugin ----------------------------------------------------------------------------------------------=== #",
+		"# ===--- SamplePlugin ----------------------------------------------------------------------------------------------=== #",
 		"#                                                                                                                      ",
 		"# This is a plugin to test my brand new framework                                                                      ",
 		"# It will try to cover all the possibilities that offer this framework                                                 ",

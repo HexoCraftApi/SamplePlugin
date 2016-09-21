@@ -37,7 +37,7 @@ public class PlayerListener implements Listener
 		// Welcome message
 		// todo : réactiver une fois test terminé
 		//new SimpleMessage("").send(player);
-		//new SimpleMessage("Welcome on board. This is TestPlugin", ChatColor.GOLD).send(player);
+		//new SimpleMessage("Welcome on board. This is SamplePlugin", ChatColor.GOLD).send(player);
 		//new SimpleMessage("").send(player);
 	}
 

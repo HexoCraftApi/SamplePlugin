@@ -16,22 +16,22 @@ package com.github.hexocraftapi.sampleplugin.command;
  *    limitations under the License.
  */
 
-import com.github.hexocraftapi.command.predifined.CommandHelp;
-import com.github.hexocraftapi.sampleplugin.TestPlugin;
 import com.github.hexocraftapi.command.Command;
 import com.github.hexocraftapi.command.CommandArgument;
 import com.github.hexocraftapi.command.CommandInfo;
+import com.github.hexocraftapi.command.predifined.CommandHelp;
 import com.github.hexocraftapi.command.type.ArgTypeInteger;
 import com.github.hexocraftapi.command.type.ArgTypeString;
+import com.github.hexocraftapi.sampleplugin.SamplePlugin;
 import com.google.common.collect.Lists;
 import org.bukkit.inventory.ItemStack;
 
 /**
  * @author <b>hexosse</b> (<a href="https://github.comp/hexosse">hexosse on GitHub</a>))
  */
-public class ItemCommands extends Command<TestPlugin>
+public class ItemCommands extends Command<SamplePlugin>
 {
-	public ItemCommands(TestPlugin plugin)
+	public ItemCommands(SamplePlugin plugin)
 	{
 		super("Item", plugin);
 		this.setAliases(Lists.newArrayList("si"));
@@ -54,9 +54,9 @@ public class ItemCommands extends Command<TestPlugin>
 
 
 
-	public class ItemCommandSave extends Command<TestPlugin>
+	public class ItemCommandSave extends Command<SamplePlugin>
 	{
-		public ItemCommandSave(TestPlugin plugin)
+		public ItemCommandSave(SamplePlugin plugin)
 		{
 			super("save", plugin);
 			this.setAliases(Lists.newArrayList("s"));
@@ -67,8 +67,8 @@ public class ItemCommands extends Command<TestPlugin>
 		{
 			ItemStack itemStack = commandInfo.getPlayer().getItemInHand();
 
-			TestPlugin.instance.config.items.add(itemStack);
-			TestPlugin.instance.config.save();
+			SamplePlugin.instance.config.items.add(itemStack);
+			SamplePlugin.instance.config.save();
 
 			return true;
 		}
@@ -77,9 +77,9 @@ public class ItemCommands extends Command<TestPlugin>
 
 
 
-	public class ItemCommandLoad extends Command<TestPlugin>
+	public class ItemCommandLoad extends Command<SamplePlugin>
 	{
-		public ItemCommandLoad(TestPlugin plugin)
+		public ItemCommandLoad(SamplePlugin plugin)
 		{
 			super("load", plugin);
 			this.setAliases(Lists.newArrayList("l"));
@@ -92,9 +92,9 @@ public class ItemCommands extends Command<TestPlugin>
 		{
 			Integer index = Integer.parseInt(commandInfo.getNamedArg("index"));
 
-			if(index >= 0 && index < TestPlugin.instance.config.items.size())
+			if(index >= 0 && index < SamplePlugin.instance.config.items.size())
 			{
-				ItemStack itemStack = TestPlugin.instance.config.items.get(index);
+				ItemStack itemStack = SamplePlugin.instance.config.items.get(index);
 				commandInfo.getPlayer().getWorld().dropItem(commandInfo.getPlayer().getLocation(), itemStack);
 			}
 
@@ -105,9 +105,9 @@ public class ItemCommands extends Command<TestPlugin>
 
 
 
-	public class ItemCommandSaveName extends Command<TestPlugin>
+	public class ItemCommandSaveName extends Command<SamplePlugin>
 	{
-		public ItemCommandSaveName(TestPlugin plugin)
+		public ItemCommandSaveName(SamplePlugin plugin)
 		{
 			super("saveName", plugin);
 			this.setAliases(Lists.newArrayList("sn"));
@@ -122,8 +122,8 @@ public class ItemCommands extends Command<TestPlugin>
 
 			ItemStack itemStack = commandInfo.getPlayer().getItemInHand();
 
-			TestPlugin.instance.config.items2.put(name,itemStack);
-			TestPlugin.instance.config.save();
+			SamplePlugin.instance.config.items2.put(name,itemStack);
+			SamplePlugin.instance.config.save();
 
 			return true;
 		}
@@ -132,9 +132,9 @@ public class ItemCommands extends Command<TestPlugin>
 
 
 
-	public class ItemCommandLoadName extends Command<TestPlugin>
+	public class ItemCommandLoadName extends Command<SamplePlugin>
 	{
-		public ItemCommandLoadName(TestPlugin plugin)
+		public ItemCommandLoadName(SamplePlugin plugin)
 		{
 			super("loadName", plugin);
 			this.setAliases(Lists.newArrayList("ln"));
@@ -147,7 +147,7 @@ public class ItemCommands extends Command<TestPlugin>
 		{
 			String name = commandInfo.getNamedArg("name");
 
-			ItemStack itemStack = TestPlugin.instance.config.items2.get(name);
+			ItemStack itemStack = SamplePlugin.instance.config.items2.get(name);
 			commandInfo.getPlayer().getWorld().dropItem(commandInfo.getPlayer().getLocation(), itemStack);
 
 			return true;
@@ -157,9 +157,9 @@ public class ItemCommands extends Command<TestPlugin>
 
 
 
-	public class ItemCommandHelp extends CommandHelp<TestPlugin>
+	public class ItemCommandHelp extends CommandHelp<SamplePlugin>
 	{
-		public ItemCommandHelp(TestPlugin plugin)
+		public ItemCommandHelp(SamplePlugin plugin)
 		{
 			super(plugin);
 		}
