@@ -16,6 +16,9 @@ package com.github.hexocraftapi.sampleplugin.listener;
  * limitations under the License.
  */
 
+import com.github.hexocraftapi.message.predifined.message.SimpleMessage;
+import com.github.hexocraftapi.sampleplugin.SamplePlugin;
+import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
@@ -35,10 +38,13 @@ public class PlayerListener implements Listener
 		Player player = joinEvent.getPlayer();
 
 		// Welcome message
-		// todo : réactiver une fois test terminé
-		//new SimpleMessage("").send(player);
-		//new SimpleMessage("Welcome on board. This is SamplePlugin", ChatColor.GOLD).send(player);
-		//new SimpleMessage("").send(player);
+		new SimpleMessage("").send(player);
+		new SimpleMessage("Welcome on board. This is SamplePlugin", ChatColor.GOLD).send(player);
+		new SimpleMessage("").send(player);
+
+		// Check for update
+		if(player.isOp())
+			SamplePlugin.instance.runUpdater(player, 20);
 	}
 
 	// Play the event sound when player is joining and event is running
