@@ -46,13 +46,17 @@ public class Config extends Configuration
 {
 	/* Plugin */
 	@ConfigPath(path = "plugin", comment = "Plugin options")
-	@ConfigValue(path = "plugin.useMetrics", comment ="Allow metrics")		public boolean useMetrics = (boolean) true;
-	@ConfigValue(path = "*.useUpdater", comment = "Auto update plugin")		public boolean useUpdater = (boolean) true;
+	@ConfigValue(path = "plugin.useMetrics", comment ="Enable Metrics")		public boolean useMetrics = (boolean) true;
+	@ConfigValue(path = "*.useUpdater", comment = "Enable Updater")			public boolean useUpdater = (boolean) true;
 
-	@ConfigValue(path = "test", comment = {"Test1", "Test2", "Test3"})		public ConfigMore configMore;
+	@ConfigValue(path = "test", comment = {"This is a test of nested config class", "Test2", "Test3"})
+																			public ConfigMore configMore = null;
 
-	@ConfigValue(path = "items")											public ArrayList<ItemStack> items = new ArrayList<ItemStack>();
-	@ConfigValue(path = "items2")											public HashMap<String, ItemStack> items2 = new HashMap<String, ItemStack>();
+	@ConfigValue(path = "items", comment = "List of items used with the /item command")
+																			public ArrayList<ItemStack> items = new ArrayList<ItemStack>();
+
+	@ConfigValue(path = "items2", comment = "An other list of items just fot testing purpose")
+																			public HashMap<String, ItemStack> items2 = new HashMap<String, ItemStack>();
 
 
 	public Config(JavaPlugin plugin, String fileName, boolean load)

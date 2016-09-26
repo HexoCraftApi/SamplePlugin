@@ -31,12 +31,20 @@ import java.lang.reflect.InvocationTargetException;
  */
 public class ConfigMore extends Configuration
 {
-	@ConfigValue(path = "*.bool", comment = "bool bool bool") 			public boolean bool = true;
-	@ConfigValue(path = "*.sound", comment = "sound sound sound") 		public Sound sound = Sound.ENTITY_GHAST_SCREAM;
-	@ConfigValue(path = "*.volume", comment = "volume volume volume") 	public float volume = 0.8f;
-	@ConfigValue(path = "*.internal", comment = "internal") 			public Internal internal = new Internal();
+	@ConfigValue(path = "*.bool", comment = "This is a boolean value")
+	public boolean bool = true;
 
-	@ConfigValue(path = "*.internalConf1", comment = "internalConf1") 	public InternalConf1 internalConf1 = null;
+	@ConfigValue(path = "*.sound", comment = {"This is a sound","This sound can be from 1.9 or 1.10","it won't crash if you use a 1.10 sound on 1.9 server"})
+	public Sound sound = Sound.ENTITY_GHAST_SCREAM;
+
+	@ConfigValue(path = "*.volume", comment = "Volume")
+	public float volume = 0.8f;
+
+	@ConfigValue(path = "*.internal", comment = {"Again a nested class.","However, this class does NOT inherit from Configuration so it's up to ConfigMore to serialize and deserialize the data."})
+	public Internal internal = new Internal();
+
+	@ConfigValue(path = "*.internalConf1", comment = {"Again a nested class.","However, this class INHERIT from Configuration and then handle the serialize and deserialize method."})
+	public InternalConf1 internalConf1 = null;
 
 	public ConfigMore(JavaPlugin plugin)
 	{
