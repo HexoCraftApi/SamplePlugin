@@ -19,6 +19,7 @@ package com.github.hexocraftapi.sampleplugin.configuration;
 import com.github.hexocraftapi.configuration.Configuration;
 import com.github.hexocraftapi.configuration.annotation.ConfigValue;
 import com.github.hexocraftapi.configuration.annotation.DelegateSerialization;
+import com.github.hexocraftapi.sounds.Sounds;
 import org.bukkit.Sound;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.json.simple.JSONObject;
@@ -34,8 +35,8 @@ public class ConfigMore extends Configuration
 	@ConfigValue(path = "*.bool", comment = "This is a boolean value")
 	public boolean bool = true;
 
-	@ConfigValue(path = "*.sound", comment = {"This is a sound","This sound can be from 1.9 or 1.10","it won't crash if you use a 1.10 sound on 1.9 server"})
-	public Sound sound = Sound.ENTITY_GHAST_SCREAM;
+	@ConfigValue(path = "*.sound", comment = {"This is a sound","This sound can be from 1.7.10 to 1.10.2","it won't crash if you use a 1.10 sound on 1.7.10 server"})
+	public Sound sound = Sounds.get("ENTITY_GHAST_SCREAM");
 
 	@ConfigValue(path = "*.volume", comment = "Volume")
 	public float volume = 0.8f;
