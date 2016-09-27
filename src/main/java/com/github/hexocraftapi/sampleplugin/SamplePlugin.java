@@ -20,17 +20,14 @@ import com.github.hexocraftapi.message.Line;
 import com.github.hexocraftapi.message.predifined.message.PluginMessage;
 import com.github.hexocraftapi.message.predifined.message.PluginTitleMessage;
 import com.github.hexocraftapi.plugin.Plugin;
-import com.github.hexocraftapi.reflection.minecraft.Minecraft;
 import com.github.hexocraftapi.sampleplugin.command.ItemCommands;
 import com.github.hexocraftapi.sampleplugin.command.MessageCommands;
 import com.github.hexocraftapi.sampleplugin.command.SamplePluginCommands;
 import com.github.hexocraftapi.sampleplugin.configuration.Config;
 import com.github.hexocraftapi.sampleplugin.listener.PlayerListener;
-import com.github.hexocraftapi.sounds.Sounds;
 import com.github.hexocraftapi.updater.GitHubUpdater;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
-import org.bukkit.Sound;
 import org.bukkit.command.CommandSender;
 
 /**
@@ -73,15 +70,6 @@ public class SamplePlugin extends Plugin
 		/* Metrics */
 		if(config.useMetrics)
 			runMetrics( 20);
-
-		System.out.println("******* Current version *******");
-		System.out.println(Minecraft.Version.getVersion().toString());
-		Sound s1 = Sounds.get("AMBIENT_CAVE");
-		Sound s2 = Sounds.get("AMBIENCE_CAVE");
-		Sound s3 = Sounds.get("BLOCK_ANVIL_FALL");
-		Sound s4 = Sounds.get("BLOCK_ANVIL_LAND");
-		Sound s5 = Sounds.get("BLOCK_ENCHANTMENT_TABLE_USE");
-		Sound s6 = Sounds.get("BLOCK_NOTE_BASS");
 	}
 
 	@Override

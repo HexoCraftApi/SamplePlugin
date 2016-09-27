@@ -17,8 +17,12 @@ package com.github.hexocraftapi.sampleplugin.listener;
  */
 
 import com.github.hexocraftapi.message.predifined.message.SimpleMessage;
+import com.github.hexocraftapi.reflection.minecraft.Minecraft;
 import com.github.hexocraftapi.sampleplugin.SamplePlugin;
+import com.github.hexocraftapi.sounds.PlaySounds;
+import com.github.hexocraftapi.sounds.Sounds;
 import org.bukkit.ChatColor;
+import org.bukkit.Sound;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
@@ -45,6 +49,11 @@ public class PlayerListener implements Listener
 		// Check for update
 		if(player.isOp())
 			SamplePlugin.instance.runUpdater(player, 20);
+
+		// Play a sound using Sounds library
+		System.out.println(Minecraft.Version.getVersion().toString());
+		Sound cave1 = Sounds.get("AMBIENT_CAVE");
+		PlaySounds.broadcast(SamplePlugin.instance, 20 * 3, cave1, 1, 0.8f);
 	}
 
 	// Play the event sound when player is joining and event is running
