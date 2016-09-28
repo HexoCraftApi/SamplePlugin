@@ -48,6 +48,7 @@ public class SamplePlugin extends Plugin
 
        /* Chargement de la configuration */
 		config = new Config(this, "config.yml", true);
+		config.save();
 
 		/* Enregistrement des commandes */
 		registerCommands(new SamplePluginCommands(this));

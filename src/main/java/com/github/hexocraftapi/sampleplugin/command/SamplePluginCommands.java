@@ -25,6 +25,7 @@ import com.github.hexocraftapi.message.predifined.message.PluginMessage;
 import com.github.hexocraftapi.sampleplugin.SamplePlugin;
 import com.github.hexocraftapi.sampleplugin.configuration.Config;
 import com.google.common.collect.Lists;
+import org.apache.commons.lang.StringUtils;
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
@@ -60,6 +61,7 @@ public class SamplePluginCommands extends Command<SamplePlugin>
 		{
 			super(plugin, "");
 			this.setAliases(Lists.newArrayList("r"));
+			this.setDescription(StringUtils.join(plugin.config.cReload,"\n"));
 		}
 
 		@Override

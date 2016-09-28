@@ -25,7 +25,9 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 
 /**
  * @author <b>Hexosse</b> (<a href="https://github.com/hexosse">on GitHub</a>))
@@ -58,6 +60,9 @@ public class Config extends Configuration
 	@ConfigValue(path = "items2", comment = "An other list of items just fot testing purpose")
 																			public HashMap<String, ItemStack> items2 = new HashMap<String, ItemStack>();
 
+	@ConfigPath(path = "messages", 		comment = "List of messages used in commands")
+	@ConfigValue(path = "commands.reload")									public List cReload = Arrays.asList("Reload SoundEffect");
+	@ConfigValue(path = "commands.test")									public String cTest = "This is a test";
 
 	public Config(JavaPlugin plugin, String fileName, boolean load)
 	{
