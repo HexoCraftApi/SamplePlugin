@@ -19,6 +19,7 @@ package com.github.hexocraftapi.sampleplugin.configuration;
 import com.github.hexocraftapi.configuration.Configuration;
 import com.github.hexocraftapi.configuration.annotation.ConfigValue;
 import com.github.hexocraftapi.configuration.annotation.DelegateSerialization;
+import com.github.hexocraftapi.configuration.collection.ConfigurationObject;
 import com.github.hexocraftapi.sounds.Sounds;
 import org.bukkit.Sound;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -30,7 +31,7 @@ import java.lang.reflect.InvocationTargetException;
 /**
  * @author <b>Hexosse</b> (<a href="https://github.com/hexosse">on GitHub</a>))
  */
-public class ConfigMore extends Configuration
+public class ConfigMore extends ConfigurationObject
 {
 	@ConfigValue(path = "*.bool", comment = "This is a boolean value")
 	public boolean bool = true;
@@ -49,7 +50,7 @@ public class ConfigMore extends Configuration
 
 	public ConfigMore(JavaPlugin plugin)
 	{
-		super(plugin, "");
+		super(plugin);
 		internalConf1 = new InternalConf1(plugin);
 	}
 
