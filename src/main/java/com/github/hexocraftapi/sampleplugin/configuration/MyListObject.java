@@ -18,6 +18,7 @@ package com.github.hexocraftapi.sampleplugin.configuration;
 
 import com.github.hexocraftapi.configuration.Configuration;
 import com.github.hexocraftapi.configuration.annotation.ConfigValue;
+import com.github.hexocraftapi.configuration.collection.ConfigurationList;
 import com.github.hexocraftapi.configuration.collection.ConfigurationObject;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -31,6 +32,8 @@ public class MyListObject extends ConfigurationObject
 	@ConfigValue(path = "*.name", comment = "This is the name in MyListObject class.")				private String name;
 	@ConfigValue(path = "*.description", comment = "This is a comment in MyListObject class.")		private String description;
 	@ConfigValue(path = "*.value", comment = "")													private long value;
+
+	@ConfigValue(path = "*.list")																	private ConfigurationList<MyListObject> list = null;
 
 	protected MyListObject(JavaPlugin plugin)
 	{
@@ -56,6 +59,14 @@ public class MyListObject extends ConfigurationObject
 	public long getValue()
 	{
 		return value;
+	}
+
+	void add(MyListObject obj)
+	{
+		if(list == null)
+			list = new ConfigurationList<>();
+
+		list.add(obj);
 	}
 
 	@Override

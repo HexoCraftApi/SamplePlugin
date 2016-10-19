@@ -70,6 +70,7 @@ public class Config extends Configuration
 	@ConfigValue(path = "object", comment = "A object of type MyMapObject")		public MyObject							object     = null;
 	@ConfigValue(path = "objects", comment = "A list of MyMapObject")			public ConfigurationMap<MyMapObject>   objects     = null;
 	@ConfigValue(path = "MyObjectList", comment = "A list of MyListObject")		public ConfigurationList<MyListObject> objectsList = null;
+	@ConfigValue(path = "MyList2", comment = "A list of MyListObject")			public ConfigurationList<MyListObject> list2 = null;
 
 	public Config(JavaPlugin plugin, String fileName, boolean load)
 	{
@@ -99,6 +100,16 @@ public class Config extends Configuration
 		objectsList.add(obj6);
 		objectsList.add(obj7);
 		objectsList.add(obj8);
+
+		list2 = new ConfigurationList<MyListObject>();
+		MyListObject main = new MyListObject(plugin, "Main", "this is Main", 0);
+		MyListObject child1 = new MyListObject(plugin, "child1", "this is child1", 1);
+		MyListObject child2 = new MyListObject(plugin, "child2", "this is child2", 2);
+		MyListObject child3 = new MyListObject(plugin, "child3", "this is child3", 3);
+		list2.add(main);
+		main.add(child1);
+		main.add(child2);
+		main.add(child3);
 
 		if(load) load();
 	}

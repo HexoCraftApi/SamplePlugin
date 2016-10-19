@@ -48,7 +48,7 @@ public class SamplePlugin extends Plugin
 		/* Instance du plugin */
 		instance = this;
 
-       /* Chargement de la configuration */
+		/* Chargement de la configuration */
 		//(new File(this.getDataFolder(), "config.yml")).delete();
 		config = new Config(this, "config.yml", true);
 		//config.save();
