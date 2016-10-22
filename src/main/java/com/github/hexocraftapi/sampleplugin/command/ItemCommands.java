@@ -23,8 +23,10 @@ import com.github.hexocraftapi.command.predifined.CommandHelp;
 import com.github.hexocraftapi.command.type.ArgTypeInteger;
 import com.github.hexocraftapi.command.type.ArgTypeString;
 import com.github.hexocraftapi.sampleplugin.SamplePlugin;
+import com.github.hexocraftapi.util.PlayerUtil;
 import com.google.common.collect.Lists;
 import org.bukkit.inventory.ItemStack;
+
 
 /**
  * @author <b>Hexosse</b> (<a href="https://github.com/hexosse">on GitHub</a>))
@@ -65,7 +67,7 @@ public class ItemCommands extends Command<SamplePlugin>
 		@Override
 		public boolean onCommand(CommandInfo commandInfo)
 		{
-			ItemStack itemStack = commandInfo.getPlayer().getItemInHand();
+			ItemStack itemStack = PlayerUtil.getItemInHand(commandInfo.getPlayer());
 
 			SamplePlugin.instance.config.items.add(itemStack);
 			SamplePlugin.instance.config.save();
@@ -120,7 +122,7 @@ public class ItemCommands extends Command<SamplePlugin>
 		{
 			String name = commandInfo.getNamedArg("name");
 
-			ItemStack itemStack = commandInfo.getPlayer().getItemInHand();
+			ItemStack itemStack = PlayerUtil.getItemInHand(commandInfo.getPlayer());
 
 			SamplePlugin.instance.config.items2.put(name,itemStack);
 			SamplePlugin.instance.config.save();
