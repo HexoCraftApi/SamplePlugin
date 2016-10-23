@@ -72,6 +72,7 @@ public class MessageCommands extends Command<SamplePlugin>
 		{
 			super("send", plugin);
 			this.setAliases(Lists.newArrayList("s"));
+			this.setDescription("Display message at index");
 
 			this.addArgument(new CommandArgument<Integer>("index", ArgTypeInteger.get(), true, true));
 		}

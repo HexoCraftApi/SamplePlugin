@@ -62,6 +62,7 @@ public class ItemCommands extends Command<SamplePlugin>
 		{
 			super("save", plugin);
 			this.setAliases(Lists.newArrayList("s"));
+			this.setDescription("save the item");
 		}
 
 		@Override
@@ -164,6 +165,7 @@ public class ItemCommands extends Command<SamplePlugin>
 		public ItemCommandHelp(SamplePlugin plugin)
 		{
 			super(plugin);
+			setDisplayInlineDescription(true);
 		}
 	}
 }
