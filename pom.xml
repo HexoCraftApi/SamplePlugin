@@ -21,7 +21,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.github.hexocraftapi</groupId>
-    <artifactId>SamplePlugin</artifactId>
+    <artifactId>sample-plugin</artifactId>
+    <name>SamplePlugin</name>
     <version>1.0.0</version>
 
     <!-- Propriétés du projet -->
