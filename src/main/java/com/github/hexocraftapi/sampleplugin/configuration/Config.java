@@ -112,5 +112,10 @@ public class Config extends Configuration
 		main.add(child3);
 
 		if(load) load();
+
+		configMore = new ConfigMore(plugin);
+		configMore.bool = false;
+
+		save();
 	}
 }
