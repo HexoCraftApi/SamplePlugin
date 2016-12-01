@@ -111,7 +111,7 @@ public class MessageCommands extends Command<SamplePlugin>
 					PrefixAqua aqua = new PrefixAqua("Aqua");
 
 					EmptyMessage.toPlayer(commandInfo.getPlayer());
-					WarningMessage.toPlayer(commandInfo.getPlayer(), "This is a WarningPrefixedMessage.");
+					WarningMessage.toPlayer(commandInfo.getPlayer(), "This is a WarningPMessage.");
 
 					EmptyMessage.toPlayer(commandInfo.getPlayer());
 					WarningPrefixedMessage.toPlayer(commandInfo.getPlayer(), prefix, "This is a WarningPrefixedMessage.");
@@ -132,7 +132,7 @@ public class MessageCommands extends Command<SamplePlugin>
 					SimpleMessage.toPlayer(commandInfo.getPlayer(), "This is an SimpleMessage with color.", ChatColor.LIGHT_PURPLE);
 
 					EmptyMessage.toPlayer(commandInfo.getPlayer());
-					SimplePrefixedMessage.toPlayer(commandInfo.getPlayer(), prefix, "This is an SimplePrefixedMessage.", ChatColor.LIGHT_PURPLE);
+					SimplePrefixedMessage.toPlayer(commandInfo.getPlayer(), prefix, "This is an SimplePrefixedMessage with color.", ChatColor.LIGHT_PURPLE);
 
 					EmptyMessage.toPlayer(commandInfo.getPlayer());
 					SimplePrefixedMessage.toPlayer(commandInfo.getPlayer(), aqua, "This is an SimplePrefixedMessage with color.", ChatColor.GREEN);

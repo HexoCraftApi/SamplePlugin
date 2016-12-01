@@ -43,6 +43,11 @@ public class ItemCommands extends Command<SamplePlugin>
 		this.addSubCommand(new ItemCommandSaveName(plugin));
 		this.addSubCommand(new ItemCommandLoadName(plugin));
 		this.addSubCommand(new ItemCommandHelp(plugin));
+		this.addSubCommand(new ItemCommandFake1(plugin));
+		this.addSubCommand(new ItemCommandFake2(plugin));
+		this.addSubCommand(new ItemCommandFake3(plugin));
+		this.addSubCommand(new ItemCommandFake4(plugin));
+		this.addSubCommand(new ItemCommandFake5(plugin));
 	}
 
 	@Override
@@ -166,6 +171,49 @@ public class ItemCommands extends Command<SamplePlugin>
 		{
 			super(plugin);
 			setDisplayInlineDescription(true);
+		}
+	}
+
+
+
+
+	public class ItemCommandFake1 extends Command<SamplePlugin>
+	{
+		public ItemCommandFake1(SamplePlugin plugin)
+		{
+			super("fake1", plugin);
+		}
+	}
+
+	public class ItemCommandFake2 extends Command<SamplePlugin>
+	{
+		public ItemCommandFake2(SamplePlugin plugin)
+		{
+			super("fake2", plugin);
+		}
+	}
+
+	public class ItemCommandFake3 extends Command<SamplePlugin>
+	{
+		public ItemCommandFake3(SamplePlugin plugin)
+		{
+			super("fake3", plugin);
+		}
+	}
+
+	public class ItemCommandFake4 extends Command<SamplePlugin>
+	{
+		public ItemCommandFake4(SamplePlugin plugin)
+		{
+			super("fake4", plugin);
+		}
+	}
+
+	public class ItemCommandFake5 extends Command<SamplePlugin>
+	{
+		public ItemCommandFake5(SamplePlugin plugin)
+		{
+			super("fake5", plugin);
 		}
 	}
 }
