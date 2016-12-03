@@ -1,4 +1,4 @@
-package com.github.hexocraftapi.sampleplugin.configuration;
+package com.github.hexocraft.sampleplugin.configuration;
 
 /*
  * Copyright 2016 hexosse

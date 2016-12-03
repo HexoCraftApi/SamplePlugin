@@ -1,4 +1,4 @@
-package com.github.hexocraftapi.sampleplugin.command;
+package com.github.hexocraft.sampleplugin.command;
 
 /*
  * Copyright 2016 hexosse
@@ -22,8 +22,8 @@ import com.github.hexocraftapi.command.predifined.CommandHelp;
 import com.github.hexocraftapi.command.predifined.CommandReload;
 import com.github.hexocraftapi.message.locale.Locale;
 import com.github.hexocraftapi.message.predifined.message.PluginMessage;
-import com.github.hexocraftapi.sampleplugin.SamplePlugin;
-import com.github.hexocraftapi.sampleplugin.configuration.Config;
+import com.github.hexocraft.sampleplugin.SamplePlugin;
+import com.github.hexocraft.sampleplugin.configuration.Config;
 import com.google.common.collect.Lists;
 import org.apache.commons.lang.StringUtils;
 import org.bukkit.ChatColor;

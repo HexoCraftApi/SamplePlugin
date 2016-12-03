@@ -1,4 +1,4 @@
-package com.github.hexocraftapi.sampleplugin.command;
+package com.github.hexocraft.sampleplugin.command;
 
 /*
  * Copyright 2016 hexosse
@@ -26,7 +26,7 @@ import com.github.hexocraftapi.message.Util.FontUtil;
 import com.github.hexocraftapi.message.predifined.message.*;
 import com.github.hexocraftapi.message.predifined.prefix.colored.PrefixAqua;
 import com.github.hexocraftapi.message.predifined.prefix.colored.PrefixFire;
-import com.github.hexocraftapi.sampleplugin.SamplePlugin;
+import com.github.hexocraft.sampleplugin.SamplePlugin;
 import com.google.common.collect.Lists;
 import org.bukkit.ChatColor;
 

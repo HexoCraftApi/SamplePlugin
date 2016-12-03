@@ -20,7 +20,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.github.hexocraftapi</groupId>
+    <groupId>com.github.hexocraft</groupId>
     <artifactId>sample-plugin</artifactId>
     <name>SamplePlugin</name>
     <version>1.0.0</version>
@@ -147,6 +147,17 @@
                             <goal>shade</goal>
                         </goals>
                         <configuration>
+                            <filters>
+                                <filter>
+                                    <artifact>com.github.hexocraftapi:*</artifact>
+                                </filter>
+                            </filters>
+                            <relocations>
+                                <relocation>
+                                    <pattern>com.github.hexocraftapi</pattern>
+                                    <shadedPattern>${project.groupId}.${project.artifactId}.api</shadedPattern>
+                                </relocation>
+                            </relocations>
                             <!-- remove unnecessary stuff -->
                             <minimizeJar>true</minimizeJar>
                             <!-- utterly useless artifact from shade 2.x -->

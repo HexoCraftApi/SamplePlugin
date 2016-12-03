@@ -1,4 +1,4 @@
-package com.github.hexocraftapi.sampleplugin.command;
+package com.github.hexocraft.sampleplugin.command;
 
 /*
  * Copyright 2016 hexosse
@@ -22,7 +22,7 @@ import com.github.hexocraftapi.command.CommandInfo;
 import com.github.hexocraftapi.command.predifined.CommandHelp;
 import com.github.hexocraftapi.command.type.ArgTypeInteger;
 import com.github.hexocraftapi.command.type.ArgTypeString;
-import com.github.hexocraftapi.sampleplugin.SamplePlugin;
+import com.github.hexocraft.sampleplugin.SamplePlugin;
 import com.github.hexocraftapi.util.PlayerUtil;
 import com.google.common.collect.Lists;
 import org.bukkit.inventory.ItemStack;

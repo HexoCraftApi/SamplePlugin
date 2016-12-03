@@ -1,4 +1,4 @@
-package com.github.hexocraftapi.sampleplugin.configuration;
+package com.github.hexocraft.sampleplugin.configuration;
 
 /*
  * Copyright 2016 hexosse
@@ -18,7 +18,6 @@ package com.github.hexocraftapi.sampleplugin.configuration;
 
 import com.github.hexocraftapi.configuration.Configuration;
 import com.github.hexocraftapi.configuration.annotation.ConfigValue;
-import com.github.hexocraftapi.configuration.collection.ConfigurationMapObject;
 import com.github.hexocraftapi.configuration.collection.ConfigurationObject;
 import org.bukkit.plugin.java.JavaPlugin;
 

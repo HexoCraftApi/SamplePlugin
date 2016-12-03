@@ -1,6 +1,6 @@
 name: SamplePlugin
 version: 1.0.0
-main: com.github.hexocraftapi.sampleplugin.SamplePlugin
+main: com.github.hexocraft.sampleplugin.SamplePlugin
 
 author: hexosse
 website: www.github.hexocraftapi

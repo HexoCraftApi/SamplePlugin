@@ -1,4 +1,4 @@
-package com.github.hexocraftapi.sampleplugin;
+package com.github.hexocraft.sampleplugin;
 
 /*
  * Copyright 2016 hexosse
@@ -20,11 +20,11 @@ import com.github.hexocraftapi.message.Line;
 import com.github.hexocraftapi.message.predifined.message.PluginMessage;
 import com.github.hexocraftapi.message.predifined.message.PluginTitleMessage;
 import com.github.hexocraftapi.plugin.Plugin;
-import com.github.hexocraftapi.sampleplugin.command.ItemCommands;
-import com.github.hexocraftapi.sampleplugin.command.MessageCommands;
-import com.github.hexocraftapi.sampleplugin.command.SamplePluginCommands;
-import com.github.hexocraftapi.sampleplugin.configuration.Config;
-import com.github.hexocraftapi.sampleplugin.listener.PlayerListener;
+import com.github.hexocraft.sampleplugin.command.ItemCommands;
+import com.github.hexocraft.sampleplugin.command.MessageCommands;
+import com.github.hexocraft.sampleplugin.command.SamplePluginCommands;
+import com.github.hexocraft.sampleplugin.configuration.Config;
+import com.github.hexocraft.sampleplugin.listener.PlayerListener;
 import com.github.hexocraftapi.updater.GitHubUpdater;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;

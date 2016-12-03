@@ -1,4 +1,4 @@
-package com.github.hexocraftapi.sampleplugin.listener;
+package com.github.hexocraft.sampleplugin.listener;
 
 /*
  * Copyright 2016 hexosse
@@ -18,7 +18,7 @@ package com.github.hexocraftapi.sampleplugin.listener;
 
 import com.github.hexocraftapi.message.predifined.message.SimpleMessage;
 import com.github.hexocraftapi.reflection.minecraft.Minecraft;
-import com.github.hexocraftapi.sampleplugin.SamplePlugin;
+import com.github.hexocraft.sampleplugin.SamplePlugin;
 import com.github.hexocraftapi.sounds.PlaySounds;
 import com.github.hexocraftapi.sounds.Sounds;
 import org.bukkit.ChatColor;
